@@ -117,5 +117,66 @@ call , and apply --> immediately invoke the function , but in apply we send an a
 bind --> return a new function
 
  
+Q: What is Context?
+
+Context allows us to avoid prop drilling, so let suppose we have a WareHouse Component, and it send company details to CompanyComponent, and this component only surpass the prop to CompanyName component so it is prop Drilling lets avoid this 
+
+```
+ CompanyContext.js
+ 
+ export default CompanyContext = React.createContext('defaultvalue');
 
 
+WareHouse.js
+
+import CompanyContext ....
+const companyObject = {
+name: ['1', 2]
+}
+
+render() {
+
+return (
+ <CompanyContext.Provider value = {companyObject} >
+  <CompanyComponent />
+ </CompanyContext>
+)
+}
+
+
+CompanyComponent.js
+
+//its calling the CompanyName
+
+
+CompanyName.js
+
+import CompanyContext from '../'
+
+class CompanyName extends React.component {
+  static contextType = CompanyContext; // this should be specific
+  
+  
+  render() {
+  
+  const {name} = this.context;
+  
+  
+
+}
+```
+In functional component
+
+```
+import CompanyContext 
+
+return () {
+ const org = useContext(CompanyContext)
+}
+
+```
+
+
+### explain Forward Refs
+
+forward refs helps in passing ref from parent to child,  we can handle the reference in parent 
