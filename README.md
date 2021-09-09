@@ -78,8 +78,9 @@ Mounting
 
 2-> static getDerivedStateFromProps(props, state) 
 
+3-> render
 
-3-> componentDidMount()
+4-> componentDidMount()
 
 
 
@@ -90,11 +91,16 @@ Updation
 2 shouldComponentUpdate(p, s)
 
 
-3 getSnapShotBeforeUpdate(p,s)
+
+5-> render
 
 
 
-4 ComponentDidUpdate(s, p, snapshot)
+
+4 getSnapShotBeforeUpdate(p,s)
+
+
+6 ComponentDidUpdate(s, p, snapshot)
 
 
 Unmount
