@@ -186,3 +186,29 @@ return () {
 ### explain Forward Refs
 
 forward refs helps in passing ref from parent to child,  we can handle the reference in parent 
+
+
+##Javascript
+
+### what is recursion function 
+Recursion are those who call them self
+```
+function a(){
+//may be put some Leve event like if else
+a();
+}
+
+```
+
+### what is Set
+
+Set is special type of Collection in javascipt along with Map, so set are collection of values
+without keys, where each value may occur only once
+
+
+### what the diff between function() * name() and function() name()
+
+function namne() is like a normal function but function* name() indicate it is a generator function
+GF are functions that generaated function that can be exited and later re-entered,  an iterator object for for the function itself and each yield or return work as 
+return value on each calling time, but you can only one return here
+https://jsfiddle.net/Reuben_Rahul/s0y8zvqx/1/
