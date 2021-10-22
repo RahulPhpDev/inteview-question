@@ -190,6 +190,76 @@ forward refs helps in passing ref from parent to child,  we can handle the refer
 
 ##Javascript
 
+### What is Garbage Collector
+
+Javascript is a Garbage collector language and its a process of free up memory by destroy unsed property/object
+
+
+### what is memory leak ?
+piece of memory which no longer being used by application but some reason its never get termined from memory heap.
+
+
+### what is memory heap and call stack 
+
+Memomy Heap : Where the mormory allocation happen
+Call Stack : where code executed
+
+
+### what is lexical environment 
+ first of fall lexical environment and lexical scope are diff things
+ so lexical environment means where code is written during execution
+ lets take an example
+ 
+ ```
+ function a() { }
+ 
+ function b() {
+  function c() {}
+  }
+  ```
+  here function a lexical environment is global and function c lexcial env is function b as we
+  are seeing where these are written
+  
+  ### what is lexical scope and dynamic scope ?
+  #### dynamic scope: 
+   where function is called
+ #### lexical scope: 
+  aviable variable
+
+
+### what is IFFE ?
+IFFE (Immediately-invoked function expression) is a way to execute functions immediately, as soon as they created
+this are useul becuse they don't pollute the global object
+
+### what is execution context ?
+whenever code is run is Javascript it run inside the execution context, and it run global execution first from call stack.
+
+
+### what is Global execution 
+during exeution context first thing execute in call stack is global execution 
+and it has two property 1. Global object 2. this
+also app get hosited (below is hositing)
+global object in jS is window
+
+
+### what is hoisting
+hoiting is a behavior of moving function or variable declaration to the top of their respective environment during
+the compile time, variable partially hosted and function declaration are hoisted
+
+
+
+
+### what is function declarion and function expression
+
+function declaration --->
+```
+function a() {}
+```
+function expression
+```
+const fu = function() {} 
+```
+
 ### what is recursion function 
 Recursion are those who call them self
 ```
