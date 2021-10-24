@@ -58,7 +58,11 @@ useCallback memozize the function, so it avoid the re-rendering of function
 ```
 useCallback ( () => { return myNumber * 5 }, [myNumber]) 
 ```
+### what is useRef ?
 
+useRef useful in 2 sitution ,
+ useRef use for avoid re-rendering of the component,
+ and also create a reference to the DOM element
 
 ### Explain GetDerivedStateFromProps
 
