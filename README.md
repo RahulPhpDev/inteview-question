@@ -3,7 +3,8 @@
 React is javascript library, which work on the diffing algoritm, it is compnonent based architecture
 which allow to reuse of code
 
-
+### what is Reconciliation ?
+React is creating virtual representation of our UI in memory and then ReactDOM receive that and sync with our UI to the DOM. this is Reconciliation.
 
 ### what is React Dom
 
@@ -14,9 +15,11 @@ ReactDom is layer above the javascript DOM, it allow to glow react with the DOM.
 
 ### What is JSX
 
-Jsx stand for sytanx extension to javascript, it allows in react to right markup language, its not neccessay to right 
-jsx code but it easy to write this type of sytax, it allow to write event driven
-
+Jsx stand for sytanx extension to javascript, 
+Jsx used for special syntax for react that make to represent our UI
+Jx looks like HTML but it is not HTML
+JSX code get transformed into React.CreateElement
+JSX is not part of our browser, so we need babel for converting to valid Javascript
 
 
 ### what is Props and state
@@ -37,6 +40,24 @@ state can be modified
 
 
 state changes asyncronous
+
+### what is useMemo?
+useMemo is use for memozite the return value, its useful when state get update and our entire component get re-render, and in this sitution system will re-calcuate the function, so avoid this heavy compute we use the useMemo
+```
+useMemo( () => function() {
+return 
+}, [number] );
+
+
+```
+
+
+### what is useCallback?
+useCallback memozize the function, so it avoid the re-rendering of function 
+
+```
+useCallback ( () => { return myNumber * 5 }, [myNumber]) 
+```
 
 
 ### Explain GetDerivedStateFromProps
